@@ -5,20 +5,30 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.4.1
+
+* Rails version: 5.1.1
 
 * System dependencies
 
-* Configuration
+* Configuration:
+
+  `Add GITHUB_ACCESS_TOKEN to config/secrets.yml`
+
+* Database configuration in config/database.yml
+
+  ```
+  username
+  password
+  port
+  ```
 
 * Database creation
 
-* Database initialization
+  rake db:create
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ```
+  bin/rails test test/models/technology_test.rb
+  ```
