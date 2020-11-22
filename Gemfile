@@ -15,6 +15,9 @@ gem 'rails', '~> 5.1.1'
 # PostgreSQL
 gem 'pg'
 
+# GraphQL Client
+gem 'graphql-client'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
