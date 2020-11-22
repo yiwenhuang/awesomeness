@@ -5,14 +5,14 @@
     <td>Tech Name</td>
     <td>Category</td>
     <td>Repository URL</td>
-    <td>Time Elapsed</td>
+    <td>Link</td>
   </tr>
   <% @technologies.each do |tech|%>
   <tr>
     <td><%= tech.name %></td>
     <td><%= tech.categories.pluck(:name).join(",") %></td>
     <td><%= tech.repo_url %></td>
-    <td><%= tech.updated_at %></td>
+    <td><a href="<%= technology_url(tech) %>">more...</a></td>
   </tr>
 <% end %>
 </table>

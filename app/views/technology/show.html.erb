@@ -1,0 +1,9 @@
+<% flash.each do |type, msg| %>
+  <div><%= msg %>
+<% end %>
+
+<h2>Technology Detail of <%= @tech.name %></h2>
+<p>Star Count: <%= @tech.star_count %></p>
+<p>Fork Count: <%= @tech.fork_count %></p>
+<p>Time Eslapsed: <%= DateTime.now.in_time_zone("UTC").to_i - @tech.last_commit_at.to_i %> seconds</p>
+<p>Repository URL: <%= @tech.repo_url %></p>
