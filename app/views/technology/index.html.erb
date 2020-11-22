@@ -1,0 +1,18 @@
+<h2>Technology List</h2>
+
+<table>
+  <tr>
+    <td>Tech Name</td>
+    <td>Category</td>
+    <td>Repository URL</td>
+    <td>Time Elapsed</td>
+  </tr>
+  <% @technologies.each do |tech|%>
+  <tr>
+    <td><%= tech.name %></td>
+    <td><%= tech.categories.pluck(:name).join(",") %></td>
+    <td><%= tech.repo_url %></td>
+    <td><%= tech.updated_at %></td>
+  </tr>
+<% end %>
+</table>

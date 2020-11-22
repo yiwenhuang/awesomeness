@@ -1,0 +1,23 @@
+<% flash.each do |type, msg| %>
+  <div><%= msg %>
+<% end %>
+
+<h2>Add New Technology</h2>
+
+<%= form_for @tech, url: technology_index_path do |f| %>
+ <div><%= f.label :name %><br/>
+   <%= f.text_field :name, autofocus: true %>
+ </div>
+
+ <div><%= f.label :category %><br/>
+   <%= f.fields_for :categories do |cf| %>
+     <%= cf.text_field :name %>
+   <% end %>
+ </div>
+
+ <div><%= f.label :repo_url %><br/>
+   <%= f.text_field :repo_url %>
+ </div>
+
+  <div><%= f.submit "Submit" %></div>
+<% end %>
